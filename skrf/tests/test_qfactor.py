@@ -202,7 +202,7 @@ class QfactorTests(unittest.TestCase):
             Q2 = Qfactor(ntwk, res_type='reflection_method2', verbose=True)
         res2 = Q2.fit(method='NLQFIT7')
 
-        Q0_2 = Q.Q_unloaded(res2, A=1)
+        Q0_2 = Q2.Q_unloaded(res2, A=1)
         cal_diam2, cal_gamma_V2, cal_gamma_T2 = Q.Q_circle(res2, A=1)
 
         # Test against expected solutions
